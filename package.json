@@ -1,0 +1,25 @@
+{
+  "name": "angular-csv-parser",
+  "version": "1.0.0",
+  "description": "An angularjs service with methods to turn strings representing CSV files into arrays of objects and vice-versa",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsatragno/angular-csv-parser.git"
+  },
+  "keywords": [
+    "angularjs",
+    "angular",
+    "csv",
+    "parser"
+  ],
+  "author": "Nina Satragno <nsatragno@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nsatragno/angular-csv-parser/issues"
+  },
+  "homepage": "https://github.com/nsatragno/angular-csv-parser#readme"
+}
