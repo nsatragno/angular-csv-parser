@@ -23,7 +23,7 @@ Use `parse` to convert a string containing a valid CSV string into an array of
 objects.
 
 ```javascript
-angular.module("my-module")
+angular.module("my-module", ["angular-csv-parser"])
   .controller("MyController", ["CSVParser", function (CSVParser) {
     let string = "header1,header2, header3\n"
                + "value 1, value 2, value 3\n"
@@ -49,7 +49,7 @@ angular.module("my-module")
 Use `csvify` to convert an array of objects into a string in CSV format.
 
 ```javascript
-angular.module("my-module")
+angular.module("my-module", ["angular-csv-parser"])
   .controller("MyController", ["CSVParser", function (CSVParser) {
     let array = [{
       header1: "value 1",
@@ -74,7 +74,7 @@ Every object in the array must have the same attribute names.
 If you want to create a CSV file with only a header, you can use `csvifyEmpty`
 
 ```javascript
-angular.module("my-module")
+angular.module("my-module", ["angular-csv-parser"])
   .controller("MyController", ["CSVParser", function (CSVParser) {
     let headers = ["header1", "header2", "header3"];
 
