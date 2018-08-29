@@ -64,8 +64,8 @@ angular.module("my-module", ["angular-csv-parser"])
     let string = CSVParser.csvify(array);
 
     // string is "header1,header2, header3\n"
-               + "value 1, value 2, value 3\n"
-               + "value 4, value 5, value 6";
+    //         + "value 1, value 2, value 3\n"
+    //         + "value 4, value 5, value 6";
 });
 ```
 
@@ -80,7 +80,7 @@ angular.module("my-module", ["angular-csv-parser"])
 
     let string = CSVParser.csvify(array);
 
-    // string is "header1,header2, header3"
+    // string is "header1,header2,header3"
 });
 ```
 
