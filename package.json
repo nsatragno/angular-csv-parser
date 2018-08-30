@@ -1,6 +1,6 @@
 {
   "name": "angular-csv-parser",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "An angularjs service with methods to turn strings representing CSV files into arrays of objects and vice-versa",
   "main": "angular-csv-parser.js",
   "scripts": {
