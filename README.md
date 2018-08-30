@@ -84,6 +84,23 @@ angular.module("my-module", ["angular-csv-parser"])
 });
 ```
 
+Use `matrixToCSV` to convert an arbitrary matrix into a CSV string
+
+```javascript
+angular.module("my-module", ["angular-csv-parser"])
+  .controller("MyController", ["CSVParser", function (CSVParser) {
+    let matrix = [["uno", "dos", "tres"],
+                  [1, 2, 3],
+                  ["a"]];
+
+    let string = CSVParser.matrixToCSV(matrix);
+
+    // string is "uno,dos,tres\n"
+    //         + "1,2,3\n"
+    //         + "a\n";
+});
+```
+
 ## Testing
 
 ### Single run

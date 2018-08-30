@@ -157,11 +157,22 @@ angular.module("angular-csv-parser", [])
       return titles.map(_encode).join(",");
     };
 
+    /**
+     * Produces a CSV file from the given matrix. Each row of the matrix is
+     * translated into a row on the CSV file.
+     * @param matrix an array of arrays of arbitrary size.
+     * @return a string with the contents of the generated CSV file.
+     */
+    let matrixToCSV = function (content) {
+      return content.reduce((csv, row) => csv + row.map(_encode).join(",") + "\n", "");
+    };
+
     return {
       CSV_MIME_TYPE: CSV_MIME_TYPE,
 
       parse: parse,
       csvify: csvify,
       csvifyEmpty: csvifyEmpty,
+      matrixToCSV,
     };
   }]);

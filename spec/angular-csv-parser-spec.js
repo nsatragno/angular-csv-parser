@@ -187,5 +187,29 @@ describe("angular-csv-parser", function() {
         `uno,"""dos""","tres,cuatro"`);
     });
   });
+
+  describe("matrixToCSV()", function () {
+    it("converts an arbitrary matrix to a CSV string", function () {
+      let matrix = [["uno", "dos", "tres"],
+                    [1, 2, 3],
+                    ["a"]];
+      let expected = "uno,dos,tres\n"
+                   + "1,2,3\n"
+                   + "a\n";
+      expect(CSVParser.matrixToCSV(matrix)).toEqual(expected);
+    });
+
+    it("produces an empty CSV if content is []", function () {
+      expect(CSVParser.matrixToCSV([])).toEqual("");
+    });
+
+    it("allows empty rows", function () {
+      let matrix = [[],
+                    [1, 2]];
+      let expected = "\n1,2\n";
+
+      expect(CSVParser.matrixToCSV(matrix)).toEqual(expected);
+    });
+  });
 });
 
